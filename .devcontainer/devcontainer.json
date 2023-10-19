@@ -1,0 +1,18 @@
+{
+  "hostRequirements": {
+   "cpus": 4,
+   "memory": "8gb",
+   "storage": "32gb"
+  },
+	"name": "Go",
+	"image": "mcr.microsoft.com/devcontainers/go",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/caddy": {},
+    "ghcr.io/devcontainers/features/github-cli": {}
+  },  
+  "postAttachCommand": {
+    "server": "caddy file-server --listen :2015",
+    "port": "gh cs ports visibility 2015:public --codespace $CODESPACE_NAME"
+  },
+  "forwardPorts": [2015]
+}
