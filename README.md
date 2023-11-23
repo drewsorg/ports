@@ -1,2 +1,2 @@
 # ports
-Automate public port-forwarding via gh cli 
+Automate public port-forwarding via gh cli.
