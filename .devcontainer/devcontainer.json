@@ -11,7 +11,7 @@
     "ghcr.io/devcontainers/features/github-cli": {}
   },  
   "postAttachCommand": {
-    "server": "caddy file-server --listen :3000"
+    "server": "caddy respond \"Hello, world.\" --listen :3000"
   },
   "forwardPorts": [3000],
   "portsAttributes": {
