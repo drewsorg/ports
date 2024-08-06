@@ -11,8 +11,14 @@
     "ghcr.io/devcontainers/features/github-cli": {}
   },  
   "postAttachCommand": {
-    "server": "caddy file-server --listen :2015",
-    "port": "gh cs ports visibility 2015:public --codespace $CODESPACE_NAME"
+    "server": "caddy file-server --listen :2015"
   },
-  "forwardPorts": [2015]
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Caddy",
+      "onAutoForward": "openPreview",
+      "protocol": "http"
+    }
+  }
 }
